@@ -13,3 +13,11 @@ Combining the base model and the newly fine-tuned model results in a cohesive mo
 ## Evaluation and API Generation
 
 Assessing model accuracy encounters challenges due to limited compute units. The dataset can be split into training and testing subsets, and with the trained model, accuracy can be evaluated using a simple call after logging in through Hugging Face. The provided Flask API serves the model, accepting JSON input with the format `{"prompt": "Write an HTML code to create a login page"}`.
+
+## Errors and problems faced
+
+The main error was the lack of computing power due to the lack of a good gpu for my local system. Thus had to rely on the t4 gpu provided by google collab. This had limits and was always finishing and crashing everytime I tried to train the model. All units were finished by the time one epoch was completed. Accuracy calculation couldn't be done at the time due to the run time reloading everytime the model was loaded. 
+
+## Merits
+
+Was able to save the trained model and merge it with the base model and pushed it to Hugging Face: https://huggingface.co/jigglesaw/Finetuned_htmlmaker
